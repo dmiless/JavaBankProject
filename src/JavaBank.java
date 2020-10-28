@@ -296,7 +296,7 @@ public class JavaBank extends JFrame {
       //emptyAccount = i;
 
       displayJTextArea.setText(
-          myAccounts[noAccounts].getaccountname() + " " + myAccounts[noAccounts].getaccountnum()
+          myAccounts[noAccounts].getAccountName() + " " + myAccounts[noAccounts].getAccountNum()
               + " " + myAccounts[noAccounts].getbalance());
       noAccounts++;
       System.out.println(noAccounts);
@@ -350,18 +350,18 @@ public class JavaBank extends JFrame {
       int Deposit = Integer.parseInt(DepositJTextField.getText());
       int Withdraw = Integer.parseInt(WithdrawJTextField.getText());
 
-      for (int i = 0; i < noAccounts; i++) {
-        if ((myAccounts[i].getaccountnum() == Accountnum) && (Deposit > 0)) {
-          myAccounts[i].setbalance(myAccounts[i].getbalance() + Deposit);
-          displayJTextArea.setText(
-              myAccounts[i].getaccountname() + " " + myAccounts[i].getaccountnum() + " "
-                  + myAccounts[i].getbalance());
-        }
+      for (int i=0; i<noAccounts; i++) {
+        displayJTextArea.setText(
+            "Bank Name : " + myAccounts[i].getBankName()
+                + "\nAccount Holder : " + myAccounts[i].getAccountName()
+                + "\nAccount Number : " + myAccounts[i].getAccountNum()
+                + "\nAccount balance: " + myAccounts[i].getBalance());
 
-        if ((myAccounts[i].getaccountnum() == Accountnum) && (Withdraw > 0)) {
-          myAccounts[i].setbalance(myAccounts[i].getbalance() - Withdraw);
+
+        if ((myAccounts[i].getAccountNum() == Accountnum) && (Withdraw > 0)) {
+          myAccounts[i].setBalance(myAccounts[i].getbalance() - Withdraw);
           displayJTextArea.setText(
-              myAccounts[i].getaccountname() + " " + myAccounts[i].getaccountnum() + " "
+              myAccounts[i].getAccountName() + " " + myAccounts[i].getAccountNum() + " "
                   + myAccounts[i].getbalance());
         }
 
@@ -389,7 +389,7 @@ public class JavaBank extends JFrame {
       for (int i = 0; i < noAccounts; i++) {
 
         displayJTextArea.append(
-            myAccounts[i].getaccountname() + " " + myAccounts[i].getaccountnum() + " "
+            myAccounts[i].getAccountName() + " " + myAccounts[i].getAccountNum() + " "
                 + myAccounts[i].getbalance() + "\n");
 
 

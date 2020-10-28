@@ -29,6 +29,6 @@ public class CreditAccount extends Account {
 
   //print method
   public void print() {
-    System.out.println(accountname + " " + accountnum + " " + balance + " " + creditLimit);
+    System.out.println(accountName + " " + accountNum + " " + balance + " " + creditLimit);
   }
 }

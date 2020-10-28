@@ -1,22 +1,22 @@
 
-public class Account {
+public class Account implements InterfaceBankAccount {
 
   // class variables
-  String accountname;
-  int accountnum;
+  String accountName;
+  int accountNum;
   int balance;
 
   //default constructor for Account
   Account() {
-    this.accountname = "EMPTY";
-    this.accountnum = 0;
+    this.accountName = "EMPTY";
+    this.accountNum = 0;
     this.balance = 0;
   }
 
   //overloaded constructor for Account
   Account(String name, int num, int amt) {
-    accountname = name;
-    accountnum = num;
+    accountName = name;
+    accountNum = num;
     balance = amt;
   }
 
@@ -30,31 +30,41 @@ public class Account {
     balance = balance - amt;
   }
 
+  @Override
+  public int getBalance() {
+    return balance;
+  }
+
+  @Override
+  public String getBankName() {
+    return InterfaceBankAccount.BANK;
+  }
+
   //modifier to set the accountname
-  public void setaccountname(String name) {
-    accountname = name;
+  public void setAccountName(String name) {
+    accountName = name;
   }
 
   //modifier to set the accountnumber
-  public void setaccountnum(int num) {
-    accountnum = num;
+  public void setAccountNum(int num) {
+    accountNum = num;
   }
 
   //modifier to set the balance
-  public void setbalance(int num) {
+  public void setBalance(int num) {
     balance = num;
   }
 
   //accessor to get the accountname
-  public String getaccountname() {
+  public String getAccountName() {
 
-    return accountname;
+    return accountName;
   }
 
   //accessor to get the accountnumber
-  public int getaccountnum() {
+  public int getAccountNum() {
 
-    return accountnum;
+    return accountNum;
   }
 
   //accessor to get the account balance
@@ -64,7 +74,12 @@ public class Account {
   }
 
   //print method
-  public void print() {
-    System.out.println(accountname + " " + accountnum + " " + balance);
-  }
+  public void print()
+  {
+    System.out.println("\nBank Name : " + getBankName() +
+        "\nAccount Holder : " + accountName +
+        "\nAccount Number : " + accountNum +
+        "\nAccount balance: " + balance);
+  }//end method print
 }
+

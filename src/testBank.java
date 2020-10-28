@@ -11,13 +11,13 @@ public class testBank {
     Account A3 = new Account();
 
     //Set values of Instances created using default constructor
-    A2.setaccountname("He Xai");
-    A2.setaccountnum(22338);
-    A2.setbalance(500);
+    A2.setAccountName("He Xai");
+    A2.setAccountNum(22338);
+    A2.setBalance(500);
 
-    A3.setaccountname("Ilya Mustafana");
-    A3.setaccountnum(44559);
-    A3.setbalance(1000);
+    A3.setAccountName("Ilya Mustafana");
+    A3.setAccountNum(44559);
+    A3.setBalance(1000);
 
     // Print accounts
     A1.print();
