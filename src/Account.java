@@ -3,10 +3,12 @@ public class Account extends AbstractBankAccount {
 
   // Instance Fields
   private int bonusValue;
+  private AccountType type;
 
   //overloaded constructor for Account
-  Account(String name, int num, int amt) {
+  Account(String name, int num, int amt, AccountType type) {
     super(name, num, (amt + calculateInitialBonusValue(amt)));
+    this.type = type;
   }
 
   private static int calculateInitialBonusValue(int amt) {
@@ -38,6 +40,13 @@ public class Account extends AbstractBankAccount {
         "\nAccount Number : " + accountNum +
         "\nAccount balance: " + balance);
   }//end method print
+
+  @Override
+  public String toString() {
+    return "\nAccount Type : " + this.type +
+        super.toString();
+  }//end method toString
+
 
 
 }

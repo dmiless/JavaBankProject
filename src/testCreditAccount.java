@@ -7,9 +7,9 @@ public class testCreditAccount {
     // Instantiate 3 accounts
     // Using constructor with values
     // Instantiate 3 accounts using constructor with values
-    Account a1 = new Account("Sanjay Gupta", 11556, 300);
-    Account a2 = new Account("He Xai", 22338, 500);
-    Account a3 = new Account("Ilya Mustafana", 44559, 1000);
+    Account a1 = new Account("Sanjay Gupta",11556,300, AccountType.SAVINGS);
+    Account a2 = new Account("He Xai",22338,500, AccountType.SAVINGS);
+    Account a3 = new Account("Ilya Mustafana",44559,1000, AccountType.SAVINGS);
     // Instantiate 2 credit accounts using constructor with
     // values which will call constructor from super
     CreditAccount c1 = new CreditAccount("A.N Other", 88776, 500);
